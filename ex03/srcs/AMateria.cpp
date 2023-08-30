@@ -17,12 +17,16 @@
 
 AMateria::AMateria(void): _type("Default")
 {
+	if (!DEBUG)
+		return ;
 	std::cout << "\033[37m" << "AMateria : Default constructor called";
 	std::cout << "\033[0m" << std::endl;
 }
 
 AMateria::AMateria(const std::string &type): _type(type)
 {
+	if (!DEBUG)
+		return ;
 	std::cout << "\033[37m" << "AMateria : ";
 	std::cout << "Constructor with type parameter called";
 	std::cout << "\033[0m" << std::endl;
@@ -30,22 +34,30 @@ AMateria::AMateria(const std::string &type): _type(type)
 
 AMateria::~AMateria(void)
 {
+	if (!DEBUG)
+		return ;
 	std::cout << "\033[37m" << "AMateria : Destructor called";
 	std::cout << "\033[0m" << std::endl;
 }
 
 AMateria::AMateria(const AMateria &other)
 {
-	std::cout << "\033[37m" << "AMateria : Copy constructor called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "AMateria : Copy constructor called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	*this = other;
 }
 
 AMateria &AMateria::operator=(const AMateria &other)
 {
-	std::cout << "\033[37m" << "AMateria : Assignment operator called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "AMateria : Assignment operator called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	if (this != &other)
 	{

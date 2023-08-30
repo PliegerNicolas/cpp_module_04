@@ -6,7 +6,7 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 12:22:44 by nplieger          #+#    #+#             */
-/*   Updated: 2023/06/16 17:07:03 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 22:53:19 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "Character.hpp"
@@ -17,8 +17,11 @@
 
 Character::Character(void): _name("Default")
 {
-	std::cout << "\033[37m" << "Character : Default constructor called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "Character : Default constructor called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	for (size_t i = 0; i < _inventory_slots; i++)
 		_inventory[i] = NULL;
@@ -26,9 +29,12 @@ Character::Character(void): _name("Default")
 
 Character::Character(const std::string &name): _name(name)
 {
-	std::cout << "\033[37m" << "Character : ";
-	std::cout << "Constructor with type parameter called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "Character : ";
+		std::cout << "Constructor with type parameter called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	for (size_t i = 0; i < _inventory_slots; i++)
 		_inventory[i] = NULL;
@@ -36,8 +42,11 @@ Character::Character(const std::string &name): _name(name)
 
 Character::~Character(void)
 {
-	std::cout << "\033[37m" << "Character : Destructor called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "Character : Destructor called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	for (size_t i = 0; i < _inventory_slots; i++)
 		if (_inventory[i])
@@ -46,14 +55,19 @@ Character::~Character(void)
 
 Character::Character(const Character &other): ICharacter(other)
 {
+	if (!DEBUG)
+		return ;
 	std::cout << "\033[37m" << "Character : Copy constructor called";
 	std::cout << "\033[0m" << std::endl;
 }
 
 Character &Character::operator=(const Character &other)
 {
-	std::cout << "\033[37m" << "Character : Assignment operator called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "Character : Assignment operator called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	if (this != &other)
 	{

@@ -6,11 +6,13 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 13:01:27 by nplieger          #+#    #+#             */
-/*   Updated: 2023/08/30 17:51:59 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 22:51:27 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef IMATERIASOURCE_HPP
 # define IMATERIASOURCE_HPP
+
+# include "debug.hpp"
 
 # include "AMateria.hpp"
 

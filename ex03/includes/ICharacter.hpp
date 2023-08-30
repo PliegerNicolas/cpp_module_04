@@ -6,11 +6,13 @@
 /*   By: nicolas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 23:13:33 by nicolas           #+#    #+#             */
-/*   Updated: 2023/08/30 17:52:07 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 22:51:15 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
+
+# include "debug.hpp"
 
 # include "AMateria.hpp"
 

@@ -6,7 +6,7 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 15:29:22 by nplieger          #+#    #+#             */
-/*   Updated: 2023/08/30 17:56:57 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 22:58:32 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "MateriaSource.hpp"
@@ -17,8 +17,11 @@
 
 MateriaSource::MateriaSource(void)
 {
-	std::cout << "\033[37m" << "MateriaSource : Default constructor called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "MateriaSource : Default constructor called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	for (size_t i = 0; i < _inventory_slots; i++)
 		_inventory[i] = NULL;
@@ -26,8 +29,11 @@ MateriaSource::MateriaSource(void)
 
 MateriaSource::~MateriaSource(void)
 {
-	std::cout << "\033[37m" << "MateriaSource : Destructor called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "MateriaSource : Destructor called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	for(size_t i = 0; i < _inventory_slots; i++)
 	{
@@ -38,8 +44,11 @@ MateriaSource::~MateriaSource(void)
 
 MateriaSource::MateriaSource(const MateriaSource &other)
 {
-	std::cout << "\033[37m" << "MateriaSource : Copy constructor called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "MateriaSource : Copy constructor called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	for(size_t i = 0; i < _inventory_slots; i++)
 	{
@@ -52,8 +61,11 @@ MateriaSource::MateriaSource(const MateriaSource &other)
 
 MateriaSource	&MateriaSource::operator=(const MateriaSource &other)
 {
-	std::cout << "\033[37m" << "MateriaSource : Assignment operator called";
-	std::cout << "\033[0m" << std::endl;
+	if (DEBUG)
+	{
+		std::cout << "\033[37m" << "MateriaSource : Assignment operator called";
+		std::cout << "\033[0m" << std::endl;
+	}
 
 	if (this != &other)
 	{
@@ -84,12 +96,12 @@ void	MateriaSource::learnMateria(AMateria *m)
 	{
 		if (_inventory[i] == NULL)
 		{
-			std::cout << " learning a new spell " << m->getType() << std::endl;
+			std::cout << "Added a new spell " << m->getType() << std::endl;
 			_inventory[i] = m;
 			return ;
 		}
 	}
-	std::cout << "Inventory is full. Can't learn new spell." << std::endl;
+	std::cout << "Inventory is full. Can't add a new spell." << std::endl;
 	delete m;
 }
 

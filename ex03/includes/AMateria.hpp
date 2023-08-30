@@ -6,11 +6,13 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 13:13:58 by nplieger          #+#    #+#             */
-/*   Updated: 2023/06/15 23:20:22 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/08/30 22:50:43 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
+
+# include "debug.hpp"
 
 # include <iostream>
 # include <string>

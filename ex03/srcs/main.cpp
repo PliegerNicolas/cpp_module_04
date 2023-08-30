@@ -6,7 +6,7 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 13:13:14 by nplieger          #+#    #+#             */
-/*   Updated: 2023/06/16 17:28:31 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 23:05:20 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "Character.hpp"
@@ -15,33 +15,34 @@
 #include "Ice.hpp"
 #include "Cure.hpp"
 
-
 void	subject_tests(void)
 {
-	IMateriaSource* src = new MateriaSource(); // = spell template
+	ICharacter	*me = new Character("Nicolas");
+	ICharacter	*corrector = new Character("Corrector");
+	ICharacter	*bob = new Character("bob");
+
+	IMateriaSource	*src = new MateriaSource(); // = spell template
 	src->learnMateria(new Ice()); // add Ice
 	src->learnMateria(new Cure()); // add cure
-	ICharacter* me = new Character("me"); // create empty called "me" character
 
 	AMateria* tmp; // creat a temporary variable to reference.
+	// Create materia from MateriaSource.
 	tmp = src->createMateria("ice"); // create ice as AMateria.
 	me->equip(tmp); // equip ice to "me"
 	tmp = src->createMateria("cure"); // create cure as AMateria
 	me->equip(tmp); // equipe cure to "me"
 
+	std::cout << std::endl;
 	me->printInventory();
-
-	ICharacter* bob = new Character("bob");
-
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl;
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->use(2, *bob);
 
-	std::cout << std::endl << std::endl;
-
-	delete bob;
 	delete me;
+	delete corrector;
+	delete bob;
 	delete src;
 }
 

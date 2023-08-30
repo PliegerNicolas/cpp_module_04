@@ -6,7 +6,7 @@
 #    By: nicolas <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/21 15:02:08 by nicolas           #+#    #+#              #
-#    Updated: 2023/06/16 13:05:28 by nplieger         ###   ########.fr        #
+#    Updated: 2023/08/30 23:06:28 by nicolas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,13 +27,13 @@ SRCS_EXTENSION	=			.cpp
 SRCS_PATH		=			srcs
 MAIN_NAME		=			main
 
-SRCS_NAMES		=			ICharacter \
-							Character \
-							AMateria \
-							IMateriaSource \
-							MateriaSource \
-							Ice \
-							Cure \
+SRCS_NAMES		=			ICharacter		\
+							Character		\
+							AMateria		\
+							IMateriaSource	\
+							MateriaSource	\
+							Ice				\
+							Cure			\
 
 #* ************************************************************************** *#
 #* *                               INCLUDES                                 * *#
