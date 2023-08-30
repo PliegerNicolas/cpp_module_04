@@ -6,7 +6,7 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 15:29:22 by nplieger          #+#    #+#             */
-/*   Updated: 2023/06/16 17:18:20 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 17:56:57 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "MateriaSource.hpp"
@@ -19,6 +19,9 @@ MateriaSource::MateriaSource(void)
 {
 	std::cout << "\033[37m" << "MateriaSource : Default constructor called";
 	std::cout << "\033[0m" << std::endl;
+
+	for (size_t i = 0; i < _inventory_slots; i++)
+		_inventory[i] = NULL;
 }
 
 MateriaSource::~MateriaSource(void)

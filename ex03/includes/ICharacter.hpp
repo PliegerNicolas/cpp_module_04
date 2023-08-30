@@ -6,7 +6,7 @@
 /*   By: nicolas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 23:13:33 by nicolas           #+#    #+#             */
-/*   Updated: 2023/06/16 12:16:48 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 17:52:07 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef ICHARACTER_HPP
@@ -23,7 +23,7 @@ class	ICharacter
 
 		/* Constructors & Destructors */
 
-		virtual	~ICharacter(void) {};
+		virtual	~ICharacter(void);
 
 		/* Member functions */
 
