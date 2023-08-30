@@ -6,7 +6,7 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 09:20:04 by nplieger          #+#    #+#             */
-/*   Updated: 2023/06/13 11:54:05 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/08/30 22:39:25 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "Brain.hpp"
@@ -29,7 +29,7 @@ Brain::~Brain(void)
 
 Brain::Brain(const Brain &other)
 {
-	std::cout << "\033[37m" << "Animal : Copy constructor called";
+	std::cout << "\033[37m" << "Brain : Copy constructor called";
 	std::cout << "\033[0m" << std::endl;
 
 	for (size_t i = 0; i < 100; i++)
@@ -38,7 +38,7 @@ Brain::Brain(const Brain &other)
 
 Brain	&Brain::operator=(const Brain &other)
 {
-	std::cout << "\033[37m" << "Animal : Assignment operator called";
+	std::cout << "\033[37m" << "Brain : Assignment operator called";
 	std::cout << "\033[0m" << std::endl;
 
 	if (this != &other)
