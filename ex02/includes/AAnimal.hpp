@@ -6,7 +6,7 @@
 /*   By: nicolas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 20:04:38 by nicolas           #+#    #+#             */
-/*   Updated: 2023/06/13 12:59:32 by nplieger         ###   ########.fr       */
+/*   Updated: 2023/09/17 21:53:38 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef AANIMAL_HPP
@@ -29,11 +29,11 @@ class	AAnimal
 		AAnimal(const AAnimal &other);
 		AAnimal	&operator=(const AAnimal &other);
 
-		virtual ~AAnimal(void) = 0;
+		virtual ~AAnimal(void);
 
 		/* Member functions */
 
-		virtual	void	makeSound(void) const;
+		virtual	void	makeSound(void) const = 0;
 
 		// Getter functions
 

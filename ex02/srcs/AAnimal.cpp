@@ -6,7 +6,7 @@
 /*   By: nicolas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 20:03:26 by nicolas           #+#    #+#             */
-/*   Updated: 2023/08/30 22:38:46 by nicolas          ###   ########.fr       */
+/*   Updated: 2023/09/17 21:53:10 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "AAnimal.hpp"
@@ -55,11 +55,6 @@ AAnimal	&AAnimal::operator=(const AAnimal &other)
 /* Member Functions */
 
 /* Public */
-
-void	AAnimal::makeSound(void) const
-{
-	std::cout << "Sound not parametred." << std::endl;
-}
 
 // Getter functions
 
